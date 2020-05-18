@@ -7,13 +7,21 @@ Mustache.tags = ['{', '}'];
 var renderData = (function() {
 	var datas = [];
 	for (var i = 0; i < 9999; i++)
-		datas.push({ number: String(i) });
+		datas.push({ name: i });
 
 	return datas;
 })();
 
-var template = `{?.}Hello World!{/.}`,
-	template2 = `{#.}Hello World!{/.}`;
+var template = `
+	{?.}
+	Hello {name}!
+	{/.}
+`,
+	template2 = `
+	{#.}
+	Hello {name}!
+	{/.}
+`;
 
 
 /**************** Start Parse Testings ****************/
