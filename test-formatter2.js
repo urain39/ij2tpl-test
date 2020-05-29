@@ -7,7 +7,7 @@ Mustache.tags = ['{', '}'];
 
 var renderData = (function() {
 	var datas = [];
-	for (var i = 0; i < 9999; i++)
+	for (var i = 0; i < 10240; i++)
 		datas.push({ name: String(i) });
 
 	return datas;
