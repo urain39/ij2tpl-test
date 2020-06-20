@@ -13,9 +13,9 @@ var renderData = (function() {
 	return datas;
 })();
 
-var template = `{?.}Hello {name}!{/.}{!.}Oops! Something went wrong!{/.}`,
-	template2 = `{#.}Hello {name}!{/.}{^.}Oops! Something went wrong!{/.}`,
-	template3 = `{?.}Hello {name}!{*.}Oops! Something went wrong!{/.}`;
+var template = `{?.}Hello {name}{name.length}!{/.}{!.}Oops! Something went wrong!{/.}`,
+	template2 = `{#.}Hello {name}{name.length}!{/.}{^.}Oops! Something went wrong!{/.}`,
+	template3 = `{?.}Hello {name}{name.length}!{*.}Oops! Something went wrong!{/.}`;
 
 var result = Mustache.render(template2, renderData);
 

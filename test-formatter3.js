@@ -1,3 +1,4 @@
+var random = require('./lib/random');
 var IJ2TPL = require('./lib/ij2tpl.min');
 
 var Timer = {
@@ -27,7 +28,7 @@ template2 = IJ2TPL.parse(template2);
 var result = template.render(renderData);
 
 var total = 0,
-	times = Math.floor(100 * Math.random());
+	times = Math.floor(random.randrange(70, 80));
 
 function throw_() { throw Error('Assertion Error!'); }
 
@@ -44,7 +45,7 @@ for (var i = 0; i < times; i++) {
 console.log('template Render took ' + total / times + '(' + total + '/' + times + ')' + ' ms');
 
 total = 0,
-times = Math.floor(100 * Math.random());
+times = Math.floor(random.randrange(70, 80));
 
 for (var i = 0; i < times; i++) {
 	Timer.start();
